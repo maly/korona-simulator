@@ -428,14 +428,14 @@ var g = {
               //reinfection
               if (dot.infected) {
                 if (Math.random() < g.reinfection * dot.mouth) {
-                  dots[which].cured = 1;
+                  dots[which].cured = 0;
                   dots[which].infected = 5;
                   dots[which].mortality *= 5;
                   dots[which].immunize = 1;
                 }
               } else {
                 if (Math.random() < (g.reinfection / dot.sick) * dot.mouth) {
-                  dots[which].cured = 1;
+                  dots[which].cured = 0;
                   dots[which].infected = 5;
                   dots[which].mortality *= 5;
                   dots[which].immunize = 1;
