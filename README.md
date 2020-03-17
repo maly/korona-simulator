@@ -1,5 +1,7 @@
 # Simulátor šíření onemocnění
 
+[![](./koronasim.png)](https://maly.github.io/korona-simulator/sim.html)
+
 Jednoduchý [simulátor](https://maly.github.io/korona-simulator/sim.html) ukazuje šíření nemoci v populaci. Pro inspiraci posloužil článek [Why outbreaks like coronavirus
 spread exponentially, and how to “flatten the curve”](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/).
 
