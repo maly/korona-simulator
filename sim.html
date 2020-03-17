@@ -20,18 +20,21 @@
 <body>
   <div class="container">
     <div class="row bg-light text-dark">
-      <div class="col-6 text-right" style="min-width: 520px;">
+      <div class="col-7 text-right" style="min-width: 520px;max-width: 520px;">
         <canvas id="myCanvas" width="500" height="400"></canvas>
-        <div class="row">
+        <div class="row ">
           <div class="col">Den:<br /><span id="bigtime"></span></div>
-          <div class="col">Zdraví:<br /><span id="sane"></span></div>
-          <div class="col">Nakažení:<br /><span id="infected"></span></div>
-          <div class="col">Nemocní:<br /><span id="sick"></span></div>
-          <div class="col">Vyléčení:<br /><span id="cured"></span></div>
-          <div class="col">Mrtví:<br /><span id="dead"></span></div>
+          <div class="col sane">Zdraví:<br /><span id="sane"></span></div>
+          <div class="col infected">
+            Nakažení:<br /><span id="infected"></span>
+          </div>
+          <div class="col sick">Nemocní:<br /><span id="sick"></span></div>
+          <div class="col cured">Vyléčení:<br /><span id="cured"></span></div>
+          <div class="col dead">Mrtví:<br /><span id="dead"></span></div>
         </div>
         <canvas id="graph" width="500" height="100"></canvas><br />
       </div>
+      <!--
       <div class="col">
         <h2>Legenda</h2>
         <p><span class="square sane"></span> Zdraví</p>
@@ -41,6 +44,7 @@
         <p><span class="square dead"></span> Mrtví</p>
         <p><span class="square sane quarantine"></span> V karanténě</p>
       </div>
+    -->
       <div class="col">
         <h2>Nastavení</h2>
 

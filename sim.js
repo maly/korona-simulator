@@ -228,7 +228,9 @@ var g = {
     document.getElementById("sick").innerHTML =
       s.sick + "<br>" + Math.round(s.sick / pct) + " %";
 
-    document.getElementById("bigtime").innerText = bigtime + 1;
+    document.getElementById("bigtime").innerHTML =
+      (bigtime ? bigtime + 1 : 0) +
+      (g.quar ? '<br><span class="quarantine">ZÁKAZ</span>' : "");
 
     var quarantineUp = g.quarantineUpPct * g.dotcount;
     var quarantineDown = g.quarantineDownPct * g.dotcount;

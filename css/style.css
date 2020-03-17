@@ -20,6 +20,7 @@
 }
 .dead {
   background-color: #000000;
+  color: #eee;
 }
 
 .quarantine {
