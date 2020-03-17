@@ -20,16 +20,7 @@
 <body>
   <div class="container">
     <div class="row bg-light text-dark">
-      <div class="col-2">
-        <h2>Legenda</h2>
-        <p><span class="square sane"></span> Zdraví</p>
-        <p><span class="square infected"></span> Nakažení</p>
-        <p><span class="square sick"></span> Nemocní</p>
-        <p><span class="square cured"></span> Vyléčení</p>
-        <p><span class="square dead"></span> Mrtví</p>
-        <p><span class="square sane quarantine"></span> V karanténě</p>
-      </div>
-      <div class="col-6 text-right">
+      <div class="col-6 text-right" style="min-width: 520px;">
         <canvas id="myCanvas" width="500" height="400"></canvas>
         <div class="row">
           <div class="col">Den:<br /><span id="bigtime"></span></div>
@@ -41,7 +32,16 @@
         </div>
         <canvas id="graph" width="500" height="100"></canvas><br />
       </div>
-      <div class="col-4">
+      <div class="col">
+        <h2>Legenda</h2>
+        <p><span class="square sane"></span> Zdraví</p>
+        <p><span class="square infected"></span> Nakažení</p>
+        <p><span class="square sick"></span> Nemocní</p>
+        <p><span class="square cured"></span> Vyléčení</p>
+        <p><span class="square dead"></span> Mrtví</p>
+        <p><span class="square sane quarantine"></span> V karanténě</p>
+      </div>
+      <div class="col">
         <h2>Nastavení</h2>
 
         <form id="ctrl">
