@@ -509,12 +509,26 @@ var mkslid = (id, pct = false) => {
   });
 };
 
+function applyDevicePixelRatio(ctx) {
+  var dpr = window.devicePixelRatio || 1;
+  var c = ctx.canvas;
+  c.style.width = c.width + "px";
+  c.style.height = c.height + "px";
+  c.width *= dpr;
+  c.height *= dpr;
+  ctx.scale(dpr, dpr);
+}
+
 window.onload = () => {
   console.log("GO");
   var myCanvas = document.getElementById("myCanvas");
   context = myCanvas.getContext("2d");
+  applyDevicePixelRatio(context);
+
   var graph = document.getElementById("graph");
   gctx = graph.getContext("2d");
+  applyDevicePixelRatio(gctx);
+
   $("#run").click(() => {
     g.sim();
     g.start();
