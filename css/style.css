@@ -1,0 +1,29 @@
+.square {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sane {
+  background-color: #aaaaaa;
+}
+
+.infected {
+  background-color: #88ff88;
+}
+.sick {
+  background-color: #ff8888;
+}
+.cured {
+  background-color: #8888ff;
+}
+.dead {
+  background-color: #000000;
+}
+
+.quarantine {
+  width: 14px;
+  height: 14px;
+  border: 2px solid yellow;
+}
