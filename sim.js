@@ -382,6 +382,18 @@ var g = {
             dots[which].dy = ddy;
           }
 
+          if (dots[which].quarantine) {
+            dot.dx *= -1;
+            dot.dy *= -1;
+            let dd = dot.dx;
+            dot.dx = dot.dy;
+            dot.dy = dd;
+          }
+          if (dot.quarantine) {
+            dots[which].dx *= -1;
+            dots[which].dy *= -1;
+          }
+
           //spread infection
           if (dots[which].infected || dots[which].sick) {
             if (dot.sane) {
