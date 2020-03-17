@@ -48,6 +48,15 @@ var drawOne = function(context, dot) {
     context.stroke();
     context.fill();
   }
+  if (dot.immunize && dot.cured) {
+    context.beginPath();
+    context.strokeStyle = "#0000ff";
+    context.fillStyle = "#0000ff";
+    context.arc(dot.x, dot.y, radius / 2, Math.PI, Math.PI * 2, true);
+    context.closePath();
+    context.stroke();
+    context.fill();
+  }
 
   if (dot.quarantine) {
     context.beginPath();
