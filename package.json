@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel sim.html",
-    "build": "parcel build sim.html -d docs --public-url / --no-source-maps"
+    "build": "parcel build sim.html -d docs --public-url /korona-simulator --no-source-maps"
   },
   "repository": {
     "type": "git",
