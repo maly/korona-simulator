@@ -155,7 +155,8 @@ var g = {
       dx: Math.random() * (speed * 2) - speed,
       dy: Math.random() * (speed * 2) - speed,
       quarantine: 0,
-      mouth: 1
+      mouth: 1,
+      immunize: 0
     };
   },
 
@@ -388,7 +389,7 @@ var g = {
                 }
               }
             }
-            if (dot.cured) {
+            if (dot.cured && !dot.immunize) {
               //reinfection
 
               if (dots[which].infected) {
@@ -396,6 +397,7 @@ var g = {
                   dot.cured = 0;
                   dot.infected = 5;
                   dot.mortality *= 5;
+                  dot.immunize = 1;
                 }
               } else {
                 if (
@@ -405,6 +407,7 @@ var g = {
                   dot.cured = 0;
                   dot.infected = 5;
                   dot.mortality *= 5;
+                  dot.immunize = 1;
                 }
               }
             }
@@ -421,19 +424,21 @@ var g = {
                 }
               }
             }
-            if (dots[which].cured) {
+            if (dots[which].cured && !dots[which].immunize) {
               //reinfection
               if (dot.infected) {
                 if (Math.random() < g.reinfection * dot.mouth) {
                   dots[which].cured = 1;
                   dots[which].infected = 5;
                   dots[which].mortality *= 5;
+                  dots[which].immunize = 1;
                 }
               } else {
                 if (Math.random() < (g.reinfection / dot.sick) * dot.mouth) {
                   dots[which].cured = 1;
                   dots[which].infected = 5;
                   dots[which].mortality *= 5;
+                  dots[which].immunize = 1;
                 }
               }
             }
