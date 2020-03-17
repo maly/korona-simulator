@@ -392,7 +392,7 @@ var g = {
               if (dots[which].infected) {
                 if (Math.random() < g.reinfection * dots[which].mouth) {
                   dot.cured = 0;
-                  dot.infected = 1;
+                  dot.infected = 5;
                   dot.mortality *= 5;
                 }
               } else {
@@ -401,7 +401,7 @@ var g = {
                   (g.reinfection / dots[which].sick) * dots[which].mouth
                 ) {
                   dot.cured = 0;
-                  dot.infected = 1;
+                  dot.infected = 5;
                   dot.mortality *= 5;
                 }
               }
@@ -424,13 +424,13 @@ var g = {
               if (dot.infected) {
                 if (Math.random() < g.reinfection * dot.mouth) {
                   dots[which].cured = 1;
-                  dots[which].infected = 1;
+                  dots[which].infected = 5;
                   dots[which].mortality *= 5;
                 }
               } else {
                 if (Math.random() < (g.reinfection / dot.sick) * dot.mouth) {
                   dots[which].cured = 1;
-                  dots[which].infected = 1;
+                  dots[which].infected = 5;
                   dots[which].mortality *= 5;
                 }
               }
