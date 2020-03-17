@@ -530,7 +530,7 @@ var mkslid = (id, pct = false) => {
   });
 };
 
-function applyDevicePixelRatio(ctx) {
+const applyDevicePixelRatio = ctx => {
   var dpr = window.devicePixelRatio || 1;
   var c = ctx.canvas;
   c.style.width = c.width + "px";
@@ -538,7 +538,7 @@ function applyDevicePixelRatio(ctx) {
   c.width *= dpr;
   c.height *= dpr;
   ctx.scale(dpr, dpr);
-}
+};
 
 window.onload = () => {
   console.log("GO");
